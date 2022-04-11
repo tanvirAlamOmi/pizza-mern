@@ -1,6 +1,6 @@
 const pizzas = [{
 
-  "name": "PEPPER BARBECUE CHICKEN",
+  "name": "Blackberry Basil Pizza",
   "varients": [
     "small",
     "medium",
@@ -14,11 +14,11 @@ const pizzas = [{
     }
   ],
   "category": "nonveg",
-  "image": "https://www.dominos.co.in/files/items/Pepper_Barbeque.jpg",
+  "image": "https://cdn.loveandlemons.com/wp-content/uploads/2017/07/IMG_2017_07_16_10639-2.jpg",
   "description": "Pepper Barbecue Chicken I Cheese"
 }, {
 
-  "name": "Non Veg Supreme",
+  "name": "Zucchini Pizza",
   "varients": [
     "small",
     "medium",
@@ -32,7 +32,7 @@ const pizzas = [{
     }
   ],
   "category": "nonveg",
-  "image": "https://www.dominos.co.in/files/items/Non-Veg_Supreme.jpg",
+  "image": "https://cdn.loveandlemons.com/wp-content/uploads/2018/08/IMG_13260.jpg",
   "description": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers"
 }, {
 
@@ -54,7 +54,7 @@ const pizzas = [{
   "image": "https://www.crazymasalafood.com/wp-content/images/golden-1.jpg"
 }, {
 
-  "name": "Jalapeno & Red Paprika Pizza",
+  "name": "Cauliflower Crust Pizza",
   "varients": [
     "small",
     "medium",
@@ -68,7 +68,7 @@ const pizzas = [{
     }
   ],
   "category": "veg",
-  "image": "https://www.crazymasalafood.com/wp-content/images/jalepeno.jpg",
+  "image": "https://cdn.loveandlemons.com/wp-content/uploads/2012/04/0413_cauliflowerpizza22.jpg",
   "description": "This pizza is amazing and can become more delicious if we will add some more cheese in it. Ingredients are yeast, sugar, olive oil, salt, and all-purpose flour in a big bowl. After mixing all the ingredients, it is baked by adding Jalapeno and Paprika with corns over the cheese layer. The base is made crunchy to give it best taste. It can be made more tasty by sprinkling chili flakes and Oregano as per the taste."
 }, {
 

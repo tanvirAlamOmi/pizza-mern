@@ -1,15 +1,21 @@
 import React, {useState} from 'react'
+import {Modal} from 'react-bootstrap'
 
 export default function Product({pizza}) {
     const [quantity, setQuantity] = useState(1)
     const [varient, setVarient] = useState('small')
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
   return (
     <div className="m-5 shadow-lg p-3 mb-5 bg-white rounded">
+        <div  onClick={handleShow}>
+            <h5 className='title fw-bold'>{pizza.name}</h5>
 
-        <h5 className='title fw-bold'>{pizza.name}</h5>
-
-        <img src={pizza.image} className="img-fluid product-img" alt='' />
+            <img src={pizza.image} className="img-fluid product-img" alt='' />
+        </div>
 
         <div className='flex-container'>
 
@@ -45,6 +51,19 @@ export default function Product({pizza}) {
 
         </div>
         
+
+        <Modal  show={show} onHide={handleClose} >
+            <Modal.Header closeButton>
+                <Modal.Title>{pizza.name}</Modal.Title>
+            </Modal.Header>
+
+            <Modal.Body>
+                <img src={pizza.image} className="img-fluid product-modal-img" alt='' />
+                <p>{pizza.description}</p>
+            </Modal.Body>
+
+        </Modal>
+
     </div>
   )
 }

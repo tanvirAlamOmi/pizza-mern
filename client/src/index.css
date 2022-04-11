@@ -23,3 +23,17 @@ code {
   color: black !important;
   font-weight: bold;
 }
+
+.product-img{
+  height: 200px !important;
+  width: 200px !important;
+}
+
+.flex-container{
+  display: flex !important;
+}
+
+select{
+  box-shadow: none !important;
+  border-color: black !important;
+}

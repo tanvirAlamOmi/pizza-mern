@@ -10,7 +10,7 @@ export default function Product({pizza}) {
     const handleShow = () => setShow(true);
 
   return (
-    <div className="m-5 shadow-lg p-3 mb-5 bg-white rounded">
+    <div className="shadow-lg p-3 mb-5 bg-white rounded">
         <div  onClick={handleShow}>
             <h5 className='title fw-bold'>{pizza.name}</h5>
 

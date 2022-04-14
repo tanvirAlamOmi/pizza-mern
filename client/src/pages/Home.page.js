@@ -17,10 +17,10 @@ export default function Home() {
     <div className='row justify-content-center'>
 
       {loading ? (<h1>Loading</h1>) : error ? (<h1>Something went wrong</h1>) : (
-        products.map( pizza => {
-          return <div className='col-md-3 m-3' key={pizza._id}>
+        products.map( product => {
+          return <div className='col-md-3 m-3' key={product._id}>
               <div>
-                  <Product pizza={pizza}/>
+                  <Product product={product}/>
               </div>
           </div>
         })

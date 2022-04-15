@@ -2,8 +2,8 @@ import {combineReducers} from 'redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from '@redux-devtools/extension';
-import { getAllProductsReducer } from './reducers/product.reducer';
-import { cartReducer } from './reducers/cart.reducer';
+import { getAllProductsReducer } from './reducers/productReducer';
+import { cartReducer } from './reducers/cartReducer';
 
 
 const finalReducer = combineReducers({

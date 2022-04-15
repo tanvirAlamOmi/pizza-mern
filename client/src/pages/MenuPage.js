@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import ProductComponent from '../components/product/ProductComponent';
 import { getAllProducts } from '../actions/productAction';
 
-export default function HomePage() {
+export default function MenuPage() {
 
   const dispatch = useDispatch();
   const productState = useSelector(state => state.getAllProductsReducer);

@@ -1,5 +1,6 @@
-import React from 'react'
-import { useState, useEffect} from 'react'
+import React, { useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import { registerCustomer } from '../../actions/customerAction';
 
 export default function RegistraionComponent() {
   
@@ -7,6 +8,8 @@ export default function RegistraionComponent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const dispatch = useDispatch(); 
 
   function register (){
     if(password != confirmPassword){
@@ -18,7 +21,7 @@ export default function RegistraionComponent() {
         email,
         password
       }
-      console.log(customer);
+      dispatch(registerCustomer(customer));
     }
   }
   

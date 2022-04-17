@@ -12,5 +12,6 @@ router.get("/product/get_products", async (req, res) => new ProductController().
 
 // customers
 router.post("/auth/customer/register", async (req, res) => new CustomerController().register(req, res));
+router.post("/auth/customer/login",  (req, res) =>  new CustomerController().login(req, res));
 
 export default router;

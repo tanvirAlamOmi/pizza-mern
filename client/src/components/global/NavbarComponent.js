@@ -18,7 +18,7 @@ export default function NavbarComponent() {
             { currentCustomer ? currentCustomer.name : 'guest'}
             </a>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="/">Orders</a>
+                <a className="dropdown-item" href="/orders">Orders</a>
                 <a className="dropdown-item" href="/" onClick={() => dispatch(logoutCustomer())}>Logout</a>
             </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import CheckoutComponent from '../components/checkout/CheckoutComponent'
 
-export default function CheckoutPage() {
+export default function CheckoutPage({subtotal}) {
   return (
     <div>
-        <CheckoutComponent />
+        <CheckoutComponent subtotal= {subtotal} />
     </div>
   )
 }

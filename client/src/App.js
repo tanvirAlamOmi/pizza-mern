@@ -7,6 +7,7 @@ import MenuPage from './pages/MenuPage';
 import CartPage from './pages/CartPage';
 import RegistrationPage from './pages/auth/RegistrationPage';
 import LoginPage from './pages/auth/LoginPage';
+import OrderCollectionPage from './pages/OrderCollectionPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/registration" exact element={<RegistrationPage />} />
             <Route path="/login" exact element={<LoginPage />} />
             <Route path="/cart" exact element={<CartPage />} />
+            <Route path="/orders" exact element={<OrderCollectionPage />} />
           </Routes>
         </BrowserRouter>
     </div>

@@ -33,6 +33,20 @@ export default function RegistraionComponent() {
 
   const formHtml = (
     <div>
+      
+      <div className="form-floating mb-3">
+        <input 
+          required="required" 
+          type="name" 
+          className="form-control" 
+          id="inputName" 
+          placeholder="Name" 
+          value={name}
+          onChange={ e => setName(e.target.value)}
+        />
+        <label htmlFor="inputName" className="text-dark fw-bold">Name</label>
+      </div>
+
       <div className="form-floating mb-3">
         <input 
           required="required" 

@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../actions/cartAction'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 export default function ProductComponent({product}) {
+    AOS.init({
+        duration: 300
+    });
     const [quantity, setQuantity] = useState(1)
     const [variant, setVariant] = useState('small')
     const [show, setShow] = useState(false);
@@ -18,7 +23,7 @@ export default function ProductComponent({product}) {
     }
 
   return (
-    <div className="shadow-lg p-3 mb-5 bg-white rounded">
+    <div data-aos='zoom-in' className="shadow-lg p-3 mb-5 bg-white rounded">
         <div  onClick={handleShow}>
             <h5 className='title fw-bold'>{product.name}</h5>
 

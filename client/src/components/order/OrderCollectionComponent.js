@@ -1,9 +1,12 @@
 import React from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 export default function OrderCollectionComponent({order}) {
+  AOS.init()
 
   return (
-      <div className='flex-container card shadow p-3 mb-5 bg-body rounded'>
+      <div className='flex-container card shadow p-3 mb-5 bg-body rounded' data-aos='fade-down'>
         <div className='row p-4'>
 
           <div className='col-4' style={{textAlign:"left"}}>

@@ -18,8 +18,8 @@ export default function CheckoutComponent({subtotal}) {
     return (
         <div>
           {loading && (<LoadingComponent />)}
-          {success && (<SuccessComponent message="Registration Successful" />)}
-          {error && (<ErrorComponent message="Registration failed" />) }
+          {success && (<SuccessComponent message="Order placed Successfully" />)}
+          {error && (<ErrorComponent message="Order failed" />) }
   
           <StripeCheckout
                 amount={subtotal * 100}

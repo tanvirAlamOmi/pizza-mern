@@ -29,7 +29,7 @@ export default function CustomerListComponent() {
               {loading && (<LoadingComponent />)}
               {error && (<ErrorComponent message="Something went wrong" />)}
 
-              <table className='table table-bordered'>
+              <table className='table table-bordered table-responsive-sm'>
                 <thead className='thead-dark'>
                   <tr>
                     <th>User ID</th>

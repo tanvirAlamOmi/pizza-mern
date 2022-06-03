@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const mongoURL = process.env.MONGO_CONNECTION;
 
 const connectDb =async () => {
-    mongoose.connect('mongodb+srv://lazarus:2441139@dhar-chai.fg0kz.mongodb.net/pitta_pizza');
+    mongoose.connect(mongoURL);
     
     const db = mongoose.connection;
     

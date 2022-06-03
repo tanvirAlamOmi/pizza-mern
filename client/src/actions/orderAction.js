@@ -36,7 +36,6 @@ export const getAllOrders = () => async (dispatch) => {
 
     try {
         const response = await axios.get('/api/orders/all_orders');
-        console.log(response.data);
         dispatch({type: 'GET_ALL_ORDERS_SUCCESS', payload: response.data.data});
     } 
     catch (error) {

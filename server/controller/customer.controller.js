@@ -24,7 +24,6 @@ class CustomerController {
     }
     
     async deleteCustomer(req, res) {
-        console.log(req.body.id);
         const obj = await this.service.deleteOne(req.body.id);
         applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data deleted successfully");
     }

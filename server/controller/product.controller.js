@@ -33,7 +33,6 @@ class ProductController {
 
     
     async delete(req, res) {
-        console.log("hi");
         const obj = await this.service.deleteObject(req.body.id);
         applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data deleted successfully");
     }

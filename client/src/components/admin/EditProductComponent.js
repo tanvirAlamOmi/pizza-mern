@@ -58,11 +58,8 @@ export default function EditProductComponent({match}) {
       }
     }
 
-    console.log(updatedproduct);
 
     dispatch(updateProduct(updatedproduct))
-    // .then((res) => {
-    // })
     
   }
 

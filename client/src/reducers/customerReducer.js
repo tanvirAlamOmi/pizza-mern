@@ -37,3 +37,27 @@ export const loginCustomerReducer = (state = {}, action) => {
         default: return state;
     }
 }
+
+
+export const getAllCustomerReducer = (state = {customers: []}, action) => {
+    switch(action.type)
+    {
+        case 'GET_CUSTOMERS_REQUEST' : return {
+            loading: true,
+            ...state
+        };
+
+        case 'GET_CUSTOMERS_SUCCESS' : return {
+            loading: false,
+            customers : action.payload
+        };
+        
+        case 'GET_CUSTOMERS_FAILED' : return {
+            loading: false,
+            error : action.payload
+        };
+        
+        default: return state;
+    }
+
+}

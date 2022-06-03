@@ -58,6 +58,21 @@ class OrderService {
         const orders = await orderModel.find({customerId}).sort({_id: -1})
         return orders;
     }
+    
+    async getAllOrders() {
+        const orders = await orderModel.find()
+        return orders;
+    }
+
+    async approveOrder(orderId) {
+        const order =  await orderModel.findOneAndUpdate({_id: orderId}, {orderStatus:'APPROVED'});
+        return order;
+    }
+
+    async deliverOrder(orderId) {
+        const order =  await orderModel.findOneAndUpdate({_id: orderId}, {orderStatus:'DELIVERED'});
+        return order;
+    }
 }
 
 export default OrderService;

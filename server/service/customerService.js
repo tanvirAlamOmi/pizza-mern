@@ -27,6 +27,16 @@ class CustomerService{
         return customer;
     }
 
+    async findAll() {
+        const customers = await CustomerModel.find({})
+        return customers;
+    }
+
+    
+    async deleteOne(id) {
+        const customer = await CustomerModel.findOneAndDelete({_id: id})
+        return customer;
+    }
 }
 
 export default CustomerService;

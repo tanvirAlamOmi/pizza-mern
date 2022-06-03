@@ -16,6 +16,22 @@ class OrderController {
         const obj = await this.service.getOrdersByCustomer(req.body);
         applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data fetched successfully");
     }
+
+    async allOrders(req, res) {
+        const obj = await this.service.getAllOrders();
+        applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data fetched successfully");
+    }
+
+    
+    async approveOrder(req, res) {
+        const obj = await this.service.approveOrder(req.body.orderId);
+        applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data updated successfully");
+    }
+    
+    async deliverOrder(req, res) {
+        const obj = await this.service.deliverOrder(req.body.orderId);
+        applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data updated successfully");
+    }
 }
 
 export default OrderController

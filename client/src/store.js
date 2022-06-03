@@ -2,13 +2,18 @@ import {combineReducers} from 'redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from '@redux-devtools/extension';
-import { getAllProductsReducer } from './reducers/productReducer';
+import { getAllProductsReducer, addProductsReducer, getProductByIdReducer, updateProductReducer } from './reducers/productReducer';
 import { cartReducer } from './reducers/cartReducer';
-import { registerCustomerReducer, loginCustomerReducer } from './reducers/customerReducer';
-import { placeOrderReducer, getCustomerOrdersReducer } from './reducers/orderReducer';
+import { registerCustomerReducer, loginCustomerReducer, getAllCustomerReducer } from './reducers/customerReducer';
+import { placeOrderReducer, getCustomerOrdersReducer, getAllOrdersReducer } from './reducers/orderReducer';
 
 
 const finalReducer = combineReducers({
+    getAllCustomerReducer,
+    getAllOrdersReducer,
+    updateProductReducer,
+    getProductByIdReducer,
+    addProductsReducer,
     getAllProductsReducer,
     cartReducer,
     registerCustomerReducer,

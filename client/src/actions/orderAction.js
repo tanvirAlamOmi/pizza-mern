@@ -30,3 +30,43 @@ export const getCustomerOrders = () => async (dispatch, getState) => {
         dispatch({type: 'GET_CUSTOMER_PRODUCTS_FAILED', payload: error});
     }
 }
+
+export const getAllOrders = () => async (dispatch) => {
+    dispatch({type: 'GET_ALL_ORDERS_REQUEST'})
+
+    try {
+        const response = await axios.get('/api/orders/all_orders');
+        console.log(response.data);
+        dispatch({type: 'GET_ALL_ORDERS_SUCCESS', payload: response.data.data});
+    } 
+    catch (error) {
+        dispatch({type: 'GET_ALL_PRODUCTS_FAILED', payload: error});
+    }
+}
+
+
+export const approveOrder = (orderId) => async (dispatch) => {
+
+    try {
+        const response = await axios.post('/api/orders/approve_order', {orderId});
+        console.log(response.data.data);
+        const orders = await axios.get('/api/orders/all_orders');
+        dispatch({type: 'GET_ALL_ORDERS_SUCCESS', payload: orders.data.data});
+    } 
+    catch (error) {
+        console.log(error);;
+    }
+}
+
+
+export const deliverOrder = (orderId) => async (dispatch) => {
+
+    try {
+        const response = await axios.post('/api/orders/deliver_order', {orderId});
+        const orders = await axios.get('/api/orders/all_orders');
+        dispatch({type: 'GET_ALL_ORDERS_SUCCESS', payload: orders.data.data});
+    } 
+    catch (error) {
+        console.log(error);;
+    }
+}

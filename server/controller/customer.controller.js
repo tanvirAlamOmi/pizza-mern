@@ -17,6 +17,17 @@ class CustomerController {
         const obj = await this.service.login(req.body);
         applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Login Successful");
     }
+    
+    async getAll(req, res) {
+        const obj = await this.service.findAll({});
+        applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data fetched successfully");
+    }
+    
+    async deleteCustomer(req, res) {
+        console.log(req.body.id);
+        const obj = await this.service.deleteOne(req.body.id);
+        applicationResponse.send(res, obj, httpStatusCodes.SUCCESS.OK, "Data deleted successfully");
+    }
 }
 
 export default CustomerController;

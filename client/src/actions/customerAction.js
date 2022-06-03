@@ -31,3 +31,30 @@ export const logoutCustomer = () => {
     localStorage.removeItem('currentCustomer');
     window.location.href = '/login';
 }
+
+
+export const getAllCustomers = () => async dispatch => {
+    dispatch({type: 'GET_CUSTOMERS_REQUEST'})
+
+    try {
+        const response = await axios.get('/api/customer/all_customers');
+        dispatch({type: 'GET_CUSTOMERS_SUCCESS', payload: response.data.data});
+    } 
+    catch (error) {
+        console.log(error);
+        dispatch({type: 'GET_CUSTOMERS_FAILED', payload: error});
+    }
+}
+
+
+export const deleteCustomer = (id) => async dispatch => {
+
+    try {
+        const response = await axios.post('/api/customer/delete_customer', {id});
+        const customers = await axios.get('/api/customer/all_customers');
+        dispatch({type: 'GET_CUSTOMERS_SUCCESS', payload: customers.data.data});
+    } 
+    catch (error) {
+        console.log(error);
+    }
+}
